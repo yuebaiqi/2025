@@ -17,7 +17,7 @@ matrix <- cbind(x,y,z)
 class(matrix)
 #重命名矩阵列名
 colnames(matrix) <- c("a","b","c")
-
+matrix
 #exercise02
 #安装包
 install.packages("ade4")
@@ -25,11 +25,13 @@ install.packages("ade4")
 library(ade4)
 #查看包的函数
 help(package = "ade4")
+#查看ade4的所有数据集
+data(package="ade4")
 #加载doubs数据集
 data(doubs)
 #查看doubs数据结构
-class(doubs)
-#查看doubs数据类型
 str(doubs)
+#查看doubs数据类型
+class(doubs)
 #保存doubs到本地
 save(doubs, file = './doubs.RData')
